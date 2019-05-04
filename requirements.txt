@@ -1,0 +1,9 @@
+prometheus-client>=0.0.19
+pytz
+twisted>=19.2.0
+yamlconfig
+service-identity
+requests
+xmltodict
+pyvcd==0.1.4
+pyvcloud>=20.0.1

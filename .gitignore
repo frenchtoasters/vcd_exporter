@@ -1,0 +1,14 @@
+# Project
+config.yml
+*.swp
+.idea
+.idea/*
+venv/*
+build/*
+dist/*
+vcd_exporter.egg-info/*
+*.pyc
+__pycache__/*
+*.yml
+vcd_exporter/vcd_config/
+vcd_exporter/vcd_exporter_test.py

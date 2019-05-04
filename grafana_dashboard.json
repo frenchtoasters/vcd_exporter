@@ -1,0 +1,1285 @@
+{
+  "id": 1,
+  "title": "vCD Metrics",
+  "originalTitle": "vCD Metrics",
+  "tags": [],
+  "style": "dark",
+  "timezone": "browser",
+  "editable": true,
+  "hideControls": false,
+  "sharedCrosshair": false,
+  "rows": [
+    {
+      "collapse": false,
+      "editable": true,
+      "height": 144,
+      "panels": [
+        {
+          "cacheTimeout": null,
+          "colorBackground": true,
+          "colorValue": false,
+          "colors": [
+            "rgba(46, 177, 40, 0.97)",
+            "rgba(237, 40, 40, 0.89)",
+            "rgba(245, 54, 54, 0.9)"
+          ],
+          "datasource": null,
+          "editable": true,
+          "error": false,
+          "format": "none",
+          "id": 1,
+          "interval": null,
+          "links": [
+            {
+              "targetBlank": true,
+              "title": "Tenant Portal",
+              "type": "absolute",
+              "url": ""
+            }
+          ],
+          "maxDataPoints": 100,
+          "minSpan": 2,
+          "nullPointMode": "connected",
+          "nullText": null,
+          "postfix": "",
+          "postfixFontSize": "50%",
+          "prefix": "",
+          "prefixFontSize": "50%",
+          "span": 1.455078125,
+          "sparkline": {
+            "fillColor": "rgba(31, 118, 189, 0.18)",
+            "full": false,
+            "lineColor": "rgb(31, 120, 193)",
+            "show": false
+          },
+          "targets": [
+            {
+              "expr": "vcd_org_is_enabled{job='vcd_exporter', group='vcd-localhost', org_full_name=\"Lobster-Shack\"}",
+              "intervalFactor": 2,
+              "legendFormat": "",
+              "refId": "A"
+            }
+          ],
+          "thresholds": "1,2",
+          "title": "Org Status",
+          "type": "singlestat",
+          "valueFontSize": "80%",
+          "valueMaps": [
+            {
+              "op": "=",
+              "text": "Enabled",
+              "value": "1"
+            },
+            {
+              "op": "=",
+              "text": "Disabled",
+              "value": "2"
+            }
+          ],
+          "valueName": "avg"
+        },
+        {
+          "cacheTimeout": null,
+          "colorBackground": false,
+          "colorValue": false,
+          "colors": [
+            "rgba(245, 54, 54, 0.9)",
+            "rgba(237, 129, 40, 0.89)",
+            "rgba(50, 172, 45, 0.97)"
+          ],
+          "datasource": null,
+          "editable": true,
+          "error": false,
+          "format": "none",
+          "id": 8,
+          "interval": null,
+          "links": [],
+          "maxDataPoints": 100,
+          "nullPointMode": "connected",
+          "nullText": null,
+          "postfix": "",
+          "postfixFontSize": "50%",
+          "prefix": "",
+          "prefixFontSize": "50%",
+          "span": 1,
+          "sparkline": {
+            "fillColor": "rgba(31, 118, 189, 0.18)",
+            "full": false,
+            "lineColor": "rgb(31, 120, 193)",
+            "show": false
+          },
+          "targets": [
+            {
+              "expr": "sum(vcd_org_is_enabled{})",
+              "intervalFactor": 2,
+              "refId": "A"
+            }
+          ],
+          "thresholds": "",
+          "title": "Total vOrgs",
+          "type": "singlestat",
+          "valueFontSize": "80%",
+          "valueMaps": [
+            {
+              "op": "=",
+              "text": "N/A",
+              "value": "null"
+            }
+          ],
+          "valueName": "avg"
+        },
+        {
+          "cacheTimeout": null,
+          "colorBackground": false,
+          "colorValue": false,
+          "colors": [
+            "rgba(245, 54, 54, 0.9)",
+            "rgba(237, 129, 40, 0.89)",
+            "rgba(50, 172, 45, 0.97)"
+          ],
+          "datasource": null,
+          "editable": true,
+          "error": false,
+          "format": "none",
+          "id": 7,
+          "interval": null,
+          "links": [],
+          "maxDataPoints": 100,
+          "nullPointMode": "connected",
+          "nullText": null,
+          "postfix": "",
+          "postfixFontSize": "50%",
+          "prefix": "",
+          "prefixFontSize": "50%",
+          "span": 1,
+          "sparkline": {
+            "fillColor": "rgba(31, 118, 189, 0.18)",
+            "full": false,
+            "lineColor": "rgb(31, 120, 193)",
+            "show": false
+          },
+          "targets": [
+            {
+              "expr": "count(vcd_vdc_cpu_allocated{allocation_model=\"AllocationPool\"})",
+              "intervalFactor": 2,
+              "refId": "A"
+            }
+          ],
+          "thresholds": "",
+          "title": "AllocationPool",
+          "type": "singlestat",
+          "valueFontSize": "80%",
+          "valueMaps": [
+            {
+              "op": "=",
+              "text": "N/A",
+              "value": "null"
+            }
+          ],
+          "valueName": "avg"
+        }
+      ],
+      "title": "Row"
+    },
+    {
+      "collapse": false,
+      "editable": true,
+      "height": -787,
+      "panels": [
+        {
+          "cacheTimeout": null,
+          "colorBackground": false,
+          "colorValue": false,
+          "colors": [
+            "rgba(245, 54, 54, 0.9)",
+            "rgba(237, 129, 40, 0.89)",
+            "rgba(50, 172, 45, 0.97)"
+          ],
+          "datasource": null,
+          "editable": true,
+          "error": false,
+          "format": "none",
+          "id": 2,
+          "interval": null,
+          "links": [],
+          "maxDataPoints": 100,
+          "minSpan": 2,
+          "nullPointMode": "connected",
+          "nullText": null,
+          "postfix": "",
+          "postfixFontSize": "50%",
+          "prefix": "",
+          "prefixFontSize": "50%",
+          "span": 1.3521484375,
+          "sparkline": {
+            "fillColor": "rgba(31, 118, 189, 0.18)",
+            "full": false,
+            "lineColor": "rgb(31, 120, 193)",
+            "show": false
+          },
+          "targets": [
+            {
+              "expr": "sum(vcd_vdc_memory_used_bytes{})",
+              "intervalFactor": 2,
+              "refId": "A"
+            }
+          ],
+          "thresholds": "",
+          "title": "vDC Memory Consumed",
+          "type": "singlestat",
+          "valueFontSize": "80%",
+          "valueMaps": [
+            {
+              "op": "=",
+              "text": "N/A",
+              "value": "null"
+            }
+          ],
+          "valueName": "avg"
+        },
+        {
+          "cacheTimeout": null,
+          "colorBackground": false,
+          "colorValue": false,
+          "colors": [
+            "rgba(245, 54, 54, 0.9)",
+            "rgba(237, 129, 40, 0.89)",
+            "rgba(50, 172, 45, 0.97)"
+          ],
+          "datasource": null,
+          "editable": true,
+          "error": false,
+          "format": "none",
+          "id": 9,
+          "interval": null,
+          "links": [],
+          "maxDataPoints": 100,
+          "nullPointMode": "connected",
+          "nullText": null,
+          "postfix": "",
+          "postfixFontSize": "50%",
+          "prefix": "",
+          "prefixFontSize": "50%",
+          "span": 1.40107421875,
+          "sparkline": {
+            "fillColor": "rgba(31, 118, 189, 0.18)",
+            "full": false,
+            "lineColor": "rgb(31, 120, 193)",
+            "show": false
+          },
+          "targets": [
+            {
+              "expr": "sum(vcd_vdc_memory_allocated{})",
+              "intervalFactor": 2,
+              "refId": "A"
+            }
+          ],
+          "thresholds": "",
+          "title": "vDC Dedicated Memory MB",
+          "type": "singlestat",
+          "valueFontSize": "80%",
+          "valueMaps": [
+            {
+              "op": "=",
+              "text": "N/A",
+              "value": "null"
+            }
+          ],
+          "valueName": "avg"
+        },
+        {
+          "cacheTimeout": null,
+          "colorBackground": false,
+          "colorValue": false,
+          "colors": [
+            "rgba(245, 54, 54, 0.9)",
+            "rgba(237, 129, 40, 0.89)",
+            "rgba(50, 172, 45, 0.97)"
+          ],
+          "datasource": null,
+          "editable": true,
+          "error": false,
+          "format": "none",
+          "id": 4,
+          "interval": null,
+          "links": [],
+          "maxDataPoints": 100,
+          "nullPointMode": "connected",
+          "nullText": null,
+          "postfix": "",
+          "postfixFontSize": "50%",
+          "prefix": "",
+          "prefixFontSize": "50%",
+          "span": 1.20517578125,
+          "sparkline": {
+            "fillColor": "rgba(31, 118, 189, 0.18)",
+            "full": false,
+            "lineColor": "rgb(31, 120, 193)",
+            "show": false
+          },
+          "targets": [
+            {
+              "expr": "sum(vcd_vdc_used_network_count{})",
+              "intervalFactor": 2,
+              "refId": "A"
+            }
+          ],
+          "thresholds": "",
+          "title": "vDC Network Count",
+          "type": "singlestat",
+          "valueFontSize": "80%",
+          "valueMaps": [
+            {
+              "op": "=",
+              "text": "N/A",
+              "value": "null"
+            }
+          ],
+          "valueName": "avg"
+        },
+        {
+          "cacheTimeout": null,
+          "colorBackground": false,
+          "colorValue": false,
+          "colors": [
+            "rgba(245, 54, 54, 0.9)",
+            "rgba(237, 129, 40, 0.89)",
+            "rgba(50, 172, 45, 0.97)"
+          ],
+          "datasource": null,
+          "editable": true,
+          "error": false,
+          "format": "none",
+          "id": 17,
+          "interval": null,
+          "links": [],
+          "maxDataPoints": 100,
+          "nullPointMode": "connected",
+          "nullText": null,
+          "postfix": "",
+          "postfixFontSize": "50%",
+          "prefix": "",
+          "prefixFontSize": "50%",
+          "span": 1.257988608132846,
+          "sparkline": {
+            "fillColor": "rgba(31, 118, 189, 0.18)",
+            "full": false,
+            "lineColor": "rgb(31, 120, 193)",
+            "show": false
+          },
+          "targets": [
+            {
+              "expr": "sum(vcd_vdc_cpu_allocated{})",
+              "intervalFactor": 2,
+              "refId": "A"
+            }
+          ],
+          "thresholds": "",
+          "title": "vDC vCPU Dedicated",
+          "type": "singlestat",
+          "valueFontSize": "80%",
+          "valueMaps": [
+            {
+              "op": "=",
+              "text": "N/A",
+              "value": "null"
+            }
+          ],
+          "valueName": "avg"
+        },
+        {
+          "cacheTimeout": null,
+          "colorBackground": false,
+          "colorValue": false,
+          "colors": [
+            "rgba(245, 54, 54, 0.9)",
+            "rgba(237, 129, 40, 0.89)",
+            "rgba(50, 172, 45, 0.97)"
+          ],
+          "datasource": null,
+          "editable": true,
+          "error": false,
+          "format": "none",
+          "id": 10,
+          "interval": null,
+          "links": [],
+          "maxDataPoints": 100,
+          "nullPointMode": "connected",
+          "nullText": null,
+          "postfix": "",
+          "postfixFontSize": "50%",
+          "prefix": "",
+          "prefixFontSize": "50%",
+          "span": 1.3151559231171532,
+          "sparkline": {
+            "fillColor": "rgba(31, 118, 189, 0.18)",
+            "full": false,
+            "lineColor": "rgb(31, 120, 193)",
+            "show": false
+          },
+          "targets": [
+            {
+              "expr": "sum(vcd_vdc_memory_used_bytes{})",
+              "intervalFactor": 2,
+              "refId": "A"
+            }
+          ],
+          "thresholds": "",
+          "title": "vDC Memory Consumed",
+          "type": "singlestat",
+          "valueFontSize": "80%",
+          "valueMaps": [
+            {
+              "op": "=",
+              "text": "N/A",
+              "value": "null"
+            }
+          ],
+          "valueName": "avg"
+        }
+      ],
+      "title": "New row"
+    },
+    {
+      "collapse": false,
+      "editable": true,
+      "height": -329,
+      "panels": [
+        {
+          "cacheTimeout": null,
+          "colorBackground": false,
+          "colorValue": false,
+          "colors": [
+            "rgba(245, 54, 54, 0.9)",
+            "rgba(237, 129, 40, 0.89)",
+            "rgba(50, 172, 45, 0.97)"
+          ],
+          "datasource": null,
+          "editable": true,
+          "error": false,
+          "format": "none",
+          "id": 6,
+          "interval": null,
+          "links": [],
+          "maxDataPoints": 100,
+          "nullPointMode": "connected",
+          "nullText": null,
+          "postfix": "",
+          "postfixFontSize": "50%",
+          "prefix": "",
+          "prefixFontSize": "50%",
+          "span": 1,
+          "sparkline": {
+            "fillColor": "rgba(31, 118, 189, 0.18)",
+            "full": false,
+            "lineColor": "rgb(31, 120, 193)",
+            "show": false
+          },
+          "targets": [
+            {
+              "expr": "sum(vcd_vdc_vapp_status{vdc_name='DR'})",
+              "intervalFactor": 2,
+              "refId": "A"
+            }
+          ],
+          "thresholds": "",
+          "title": "Total VApp's",
+          "type": "singlestat",
+          "valueFontSize": "80%",
+          "valueMaps": [
+            {
+              "op": "=",
+              "text": "N/A",
+              "value": "null"
+            }
+          ],
+          "valueName": "avg"
+        },
+        {
+          "cacheTimeout": null,
+          "colorBackground": false,
+          "colorValue": false,
+          "colors": [
+            "rgba(245, 54, 54, 0.9)",
+            "rgba(237, 129, 40, 0.89)",
+            "rgba(50, 172, 45, 0.97)"
+          ],
+          "datasource": null,
+          "editable": true,
+          "error": false,
+          "format": "none",
+          "id": 14,
+          "interval": null,
+          "links": [],
+          "maxDataPoints": 100,
+          "nullPointMode": "connected",
+          "nullText": null,
+          "postfix": "",
+          "postfixFontSize": "50%",
+          "prefix": "",
+          "prefixFontSize": "50%",
+          "span": 1.3328321129707112,
+          "sparkline": {
+            "fillColor": "rgba(31, 118, 189, 0.18)",
+            "full": false,
+            "lineColor": "rgb(31, 120, 193)",
+            "show": false
+          },
+          "targets": [
+            {
+              "expr": "vcd_vdc_vapp_status{vapp_status='4'}",
+              "intervalFactor": 2,
+              "refId": "A"
+            }
+          ],
+          "thresholds": "",
+          "title": "Powered On vApps",
+          "type": "singlestat",
+          "valueFontSize": "80%",
+          "valueMaps": [
+            {
+              "op": "=",
+              "text": "N/A",
+              "value": "null"
+            }
+          ],
+          "valueName": "avg"
+        },
+        {
+          "cacheTimeout": null,
+          "colorBackground": false,
+          "colorValue": false,
+          "colors": [
+            "rgba(245, 54, 54, 0.9)",
+            "rgba(237, 129, 40, 0.89)",
+            "rgba(50, 172, 45, 0.97)"
+          ],
+          "datasource": null,
+          "editable": true,
+          "error": false,
+          "format": "none",
+          "id": 13,
+          "interval": null,
+          "links": [],
+          "maxDataPoints": 100,
+          "nullPointMode": "connected",
+          "nullText": null,
+          "postfix": "",
+          "postfixFontSize": "50%",
+          "prefix": "",
+          "prefixFontSize": "50%",
+          "span": 1.2203517259414225,
+          "sparkline": {
+            "fillColor": "rgba(31, 118, 189, 0.18)",
+            "full": false,
+            "lineColor": "rgb(31, 120, 193)",
+            "show": false
+          },
+          "targets": [
+            {
+              "expr": "vcd_vdc_vapp_vm_status{vapp_status='0'}",
+              "intervalFactor": 2,
+              "refId": "A"
+            }
+          ],
+          "thresholds": "",
+          "title": "Unresolved vApp",
+          "type": "singlestat",
+          "valueFontSize": "80%",
+          "valueMaps": [
+            {
+              "op": "=",
+              "text": "N/A",
+              "value": "null"
+            }
+          ],
+          "valueName": "avg"
+        },
+        {
+          "cacheTimeout": null,
+          "colorBackground": false,
+          "colorValue": false,
+          "colors": [
+            "rgba(245, 54, 54, 0.9)",
+            "rgba(237, 129, 40, 0.89)",
+            "rgba(50, 172, 45, 0.97)"
+          ],
+          "datasource": null,
+          "editable": true,
+          "error": false,
+          "format": "none",
+          "id": 11,
+          "interval": null,
+          "links": [],
+          "maxDataPoints": 100,
+          "nullPointMode": "connected",
+          "nullText": null,
+          "postfix": "",
+          "postfixFontSize": "50%",
+          "prefix": "",
+          "prefixFontSize": "50%",
+          "span": 1.3870292887029283,
+          "sparkline": {
+            "fillColor": "rgba(31, 118, 189, 0.18)",
+            "full": false,
+            "lineColor": "rgb(31, 120, 193)",
+            "show": false
+          },
+          "targets": [
+            {
+              "expr": "sum(vcd_vdc_vapp_in_maintenance{})",
+              "intervalFactor": 2,
+              "refId": "A"
+            }
+          ],
+          "thresholds": "",
+          "title": "vApp Maintenance Count",
+          "type": "singlestat",
+          "valueFontSize": "80%",
+          "valueMaps": [
+            {
+              "op": "=",
+              "text": "N/A",
+              "value": "null"
+            }
+          ],
+          "valueName": "avg"
+        },
+        {
+          "cacheTimeout": null,
+          "colorBackground": false,
+          "colorValue": false,
+          "colors": [
+            "rgba(245, 54, 54, 0.9)",
+            "rgba(237, 129, 40, 0.89)",
+            "rgba(50, 172, 45, 0.97)"
+          ],
+          "datasource": null,
+          "editable": true,
+          "error": false,
+          "format": "none",
+          "id": 12,
+          "interval": null,
+          "links": [],
+          "maxDataPoints": 100,
+          "nullPointMode": "connected",
+          "nullText": null,
+          "postfix": "",
+          "postfixFontSize": "50%",
+          "prefix": "",
+          "prefixFontSize": "50%",
+          "span": 1.1663298411349379,
+          "sparkline": {
+            "fillColor": "rgba(31, 118, 189, 0.18)",
+            "full": false,
+            "lineColor": "rgb(31, 120, 193)",
+            "show": false
+          },
+          "targets": [
+            {
+              "expr": "sum(vcd_vdc_vapp_vm_status{vapp_status='-1'})",
+              "intervalFactor": 2,
+              "refId": "A"
+            }
+          ],
+          "thresholds": "",
+          "title": "vApp Failed Create",
+          "type": "singlestat",
+          "valueFontSize": "80%",
+          "valueMaps": [
+            {
+              "op": "=",
+              "text": "N/A",
+              "value": "null"
+            }
+          ],
+          "valueName": "avg"
+        }
+      ],
+      "title": "New row"
+    },
+    {
+      "collapse": false,
+      "editable": true,
+      "height": -69,
+      "panels": [
+        {
+          "cacheTimeout": null,
+          "colorBackground": false,
+          "colorValue": false,
+          "colors": [
+            "rgba(245, 54, 54, 0.9)",
+            "rgba(237, 129, 40, 0.89)",
+            "rgba(50, 172, 45, 0.97)"
+          ],
+          "datasource": null,
+          "editable": true,
+          "error": false,
+          "format": "none",
+          "id": 15,
+          "interval": null,
+          "links": [],
+          "maxDataPoints": 100,
+          "nullPointMode": "connected",
+          "nullText": null,
+          "postfix": "",
+          "postfixFontSize": "50%",
+          "prefix": "",
+          "prefixFontSize": "50%",
+          "span": 1.2324137029288704,
+          "sparkline": {
+            "fillColor": "rgba(31, 118, 189, 0.18)",
+            "full": false,
+            "lineColor": "rgb(31, 120, 193)",
+            "show": false
+          },
+          "targets": [
+            {
+              "expr": "sum(vcd_vdc_vapp_vm_vcpu{})",
+              "intervalFactor": 2,
+              "refId": "A"
+            }
+          ],
+          "thresholds": "",
+          "title": "VM vCPU Allocated",
+          "type": "singlestat",
+          "valueFontSize": "80%",
+          "valueMaps": [
+            {
+              "op": "=",
+              "text": "N/A",
+              "value": "null"
+            }
+          ],
+          "valueName": "avg"
+        },
+        {
+          "cacheTimeout": null,
+          "colorBackground": false,
+          "colorValue": false,
+          "colors": [
+            "rgba(245, 54, 54, 0.9)",
+            "rgba(237, 129, 40, 0.89)",
+            "rgba(50, 172, 45, 0.97)"
+          ],
+          "datasource": null,
+          "editable": true,
+          "error": false,
+          "format": "none",
+          "id": 16,
+          "interval": null,
+          "links": [],
+          "maxDataPoints": 100,
+          "nullPointMode": "connected",
+          "nullText": null,
+          "postfix": "",
+          "postfixFontSize": "50%",
+          "prefix": "",
+          "prefixFontSize": "50%",
+          "span": 1.5552816095711304,
+          "sparkline": {
+            "fillColor": "rgba(31, 118, 189, 0.18)",
+            "full": false,
+            "lineColor": "rgb(31, 120, 193)",
+            "show": false
+          },
+          "targets": [
+            {
+              "expr": "sum(vcd_vdc_vapp_vm_allocated_memory_mb{})",
+              "intervalFactor": 2,
+              "refId": "A"
+            }
+          ],
+          "thresholds": "",
+          "title": "VM Memory Allocated MB",
+          "type": "singlestat",
+          "valueFontSize": "80%",
+          "valueMaps": [
+            {
+              "op": "=",
+              "text": "N/A",
+              "value": "null"
+            }
+          ],
+          "valueName": "avg"
+        },
+        {
+          "cacheTimeout": null,
+          "colorBackground": false,
+          "colorValue": false,
+          "colors": [
+            "rgba(245, 54, 54, 0.9)",
+            "rgba(237, 129, 40, 0.89)",
+            "rgba(50, 172, 45, 0.97)"
+          ],
+          "datasource": null,
+          "editable": true,
+          "error": false,
+          "format": "none",
+          "id": 22,
+          "interval": null,
+          "links": [],
+          "maxDataPoints": 100,
+          "nullPointMode": "connected",
+          "nullText": null,
+          "postfix": "",
+          "postfixFontSize": "50%",
+          "prefix": "",
+          "prefixFontSize": "50%",
+          "span": 1.6999485159518821,
+          "sparkline": {
+            "fillColor": "rgba(31, 118, 189, 0.18)",
+            "full": false,
+            "lineColor": "rgb(31, 120, 193)",
+            "show": false
+          },
+          "targets": [
+            {
+              "expr": "process_max_fds{job='vcd_exporter_metrics'}",
+              "intervalFactor": 2,
+              "legendFormat": "",
+              "refId": "A"
+            }
+          ],
+          "thresholds": "",
+          "title": "Exporter Max File Descriptors",
+          "type": "singlestat",
+          "valueFontSize": "80%",
+          "valueMaps": [
+            {
+              "op": "=",
+              "text": "N/A",
+              "value": "null"
+            }
+          ],
+          "valueName": "avg"
+        }
+      ],
+      "title": "New row"
+    },
+    {
+      "collapse": false,
+      "editable": true,
+      "height": 266,
+      "panels": [
+        {
+          "aliasColors": {},
+          "bars": false,
+          "datasource": null,
+          "editable": true,
+          "error": false,
+          "fill": 1,
+          "grid": {
+            "leftLogBase": 1,
+            "leftMax": null,
+            "leftMin": null,
+            "rightLogBase": 1,
+            "rightMax": null,
+            "rightMin": null,
+            "threshold1": null,
+            "threshold1Color": "rgba(216, 200, 27, 0.27)",
+            "threshold2": null,
+            "threshold2Color": "rgba(234, 112, 112, 0.22)"
+          },
+          "id": 3,
+          "legend": {
+            "avg": false,
+            "current": false,
+            "max": false,
+            "min": false,
+            "show": true,
+            "total": false,
+            "values": false
+          },
+          "lines": true,
+          "linewidth": 2,
+          "links": [],
+          "nullPointMode": "connected",
+          "percentage": false,
+          "pointradius": 5,
+          "points": false,
+          "renderer": "flot",
+          "seriesOverrides": [],
+          "span": 10.857477445083683,
+          "stack": false,
+          "steppedLine": false,
+          "targets": [
+            {
+              "expr": "sum(vcd_vdc_memory_used_bytes{})",
+              "intervalFactor": 2,
+              "legendFormat": "Used Bytes",
+              "refId": "A"
+            }
+          ],
+          "timeFrom": null,
+          "timeShift": null,
+          "title": "vCD Memory Consumed",
+          "tooltip": {
+            "shared": true,
+            "value_type": "cumulative"
+          },
+          "type": "graph",
+          "x-axis": true,
+          "y-axis": true,
+          "y_formats": [
+            "short",
+            "short"
+          ]
+        }
+      ],
+      "title": "New row"
+    },
+    {
+      "collapse": false,
+      "editable": true,
+      "height": -19,
+      "panels": [
+        {
+          "cacheTimeout": null,
+          "colorBackground": false,
+          "colorValue": false,
+          "colors": [
+            "rgba(245, 54, 54, 0.9)",
+            "rgba(237, 129, 40, 0.89)",
+            "rgba(50, 172, 45, 0.97)"
+          ],
+          "datasource": null,
+          "editable": true,
+          "error": false,
+          "format": "none",
+          "id": 23,
+          "interval": null,
+          "links": [],
+          "maxDataPoints": 100,
+          "nullPointMode": "connected",
+          "nullText": null,
+          "postfix": "",
+          "postfixFontSize": "50%",
+          "prefix": "",
+          "prefixFontSize": "50%",
+          "span": 4.6277131276150625,
+          "sparkline": {
+            "fillColor": "rgba(31, 118, 189, 0.18)",
+            "full": false,
+            "lineColor": "rgb(31, 120, 193)",
+            "show": false
+          },
+          "targets": [
+            {
+              "refId": "A",
+              "expr": "process_max_fds{job='vcd_exporter_metrics'}",
+              "intervalFactor": 2
+            }
+          ],
+          "thresholds": "",
+          "title": "Exporter Max File Descriptors",
+          "type": "singlestat",
+          "valueFontSize": "80%",
+          "valueMaps": [
+            {
+              "op": "=",
+              "text": "N/A",
+              "value": "null"
+            }
+          ],
+          "valueName": "avg"
+        },
+        {
+          "aliasColors": {},
+          "bars": false,
+          "datasource": null,
+          "editable": true,
+          "error": false,
+          "fill": 1,
+          "grid": {
+            "leftLogBase": 1,
+            "leftMax": null,
+            "leftMin": 1,
+            "rightLogBase": 1,
+            "rightMax": null,
+            "rightMin": null,
+            "threshold1": null,
+            "threshold1Color": "rgba(216, 200, 27, 0.27)",
+            "threshold2": null,
+            "threshold2Color": "rgba(234, 112, 112, 0.22)"
+          },
+          "id": 18,
+          "legend": {
+            "avg": false,
+            "current": false,
+            "max": false,
+            "min": false,
+            "show": true,
+            "total": false,
+            "values": false
+          },
+          "lines": true,
+          "linewidth": 2,
+          "links": [],
+          "nullPointMode": "connected",
+          "percentage": false,
+          "pointradius": 5,
+          "points": false,
+          "renderer": "flot",
+          "seriesOverrides": [],
+          "span": 2.3683969665271967,
+          "stack": false,
+          "steppedLine": false,
+          "targets": [
+            {
+              "expr": "process_virtual_memory_bytes{job='vcd_exporter_metrics'}",
+              "intervalFactor": 2,
+              "legendFormat": "Bytes",
+              "refId": "A"
+            }
+          ],
+          "timeFrom": null,
+          "timeShift": null,
+          "title": "Exporter Collector Memory Used",
+          "tooltip": {
+            "shared": true,
+            "value_type": "cumulative"
+          },
+          "type": "graph",
+          "x-axis": true,
+          "y-axis": true,
+          "y_formats": [
+            "bytes",
+            "bytes"
+          ]
+        },
+        {
+          "aliasColors": {},
+          "bars": false,
+          "datasource": null,
+          "editable": true,
+          "error": false,
+          "fill": 1,
+          "grid": {
+            "leftLogBase": 1,
+            "leftMax": null,
+            "leftMin": null,
+            "rightLogBase": 1,
+            "rightMax": null,
+            "rightMin": null,
+            "threshold1": null,
+            "threshold1Color": "rgba(216, 200, 27, 0.27)",
+            "threshold2": null,
+            "threshold2Color": "rgba(234, 112, 112, 0.22)"
+          },
+          "id": 20,
+          "legend": {
+            "avg": false,
+            "current": false,
+            "max": false,
+            "min": false,
+            "show": true,
+            "total": false,
+            "values": false
+          },
+          "lines": true,
+          "linewidth": 2,
+          "links": [],
+          "nullPointMode": "connected",
+          "percentage": false,
+          "pointradius": 5,
+          "points": false,
+          "renderer": "flot",
+          "seriesOverrides": [],
+          "span": 3.8906576882845187,
+          "stack": false,
+          "steppedLine": false,
+          "targets": [
+            {
+              "expr": "process_cpu_seconds_total{job='vcd_exporter_metrics'}",
+              "intervalFactor": 2,
+              "legendFormat": "CPU Seconds",
+              "refId": "A"
+            }
+          ],
+          "timeFrom": null,
+          "timeShift": null,
+          "title": "Exporter CPU Seconds Used",
+          "tooltip": {
+            "shared": true,
+            "value_type": "cumulative"
+          },
+          "type": "graph",
+          "x-axis": true,
+          "y-axis": true,
+          "y_formats": [
+            "short",
+            "short"
+          ]
+        },
+        {
+          "aliasColors": {},
+          "bars": false,
+          "datasource": null,
+          "editable": true,
+          "error": false,
+          "fill": 1,
+          "grid": {
+            "leftLogBase": 1,
+            "leftMax": null,
+            "leftMin": null,
+            "rightLogBase": 1,
+            "rightMax": null,
+            "rightMin": null,
+            "threshold1": null,
+            "threshold1Color": "rgba(216, 200, 27, 0.27)",
+            "threshold2": null,
+            "threshold2Color": "rgba(234, 112, 112, 0.22)"
+          },
+          "id": 21,
+          "legend": {
+            "avg": false,
+            "current": false,
+            "max": false,
+            "min": false,
+            "show": true,
+            "total": false,
+            "values": false
+          },
+          "lines": true,
+          "linewidth": 2,
+          "links": [],
+          "nullPointMode": "connected",
+          "percentage": false,
+          "pointradius": 5,
+          "points": false,
+          "renderer": "flot",
+          "seriesOverrides": [],
+          "span": 3.997907949790795,
+          "stack": false,
+          "steppedLine": false,
+          "targets": [
+            {
+              "expr": "process_open_fds{job='vcd_exporter_metrics'}",
+              "intervalFactor": 2,
+              "legendFormat": "File Descriptors",
+              "refId": "A"
+            }
+          ],
+          "timeFrom": null,
+          "timeShift": null,
+          "title": "Exporter Open File Descriptors",
+          "tooltip": {
+            "shared": true,
+            "value_type": "cumulative"
+          },
+          "type": "graph",
+          "x-axis": true,
+          "y-axis": true,
+          "y_formats": [
+            "short",
+            "short"
+          ]
+        },
+        {
+          "aliasColors": {},
+          "bars": false,
+          "datasource": null,
+          "editable": true,
+          "error": false,
+          "fill": 1,
+          "grid": {
+            "leftLogBase": 1,
+            "leftMax": null,
+            "leftMin": 1,
+            "rightLogBase": 1,
+            "rightMax": null,
+            "rightMin": null,
+            "threshold1": null,
+            "threshold1Color": "rgba(216, 200, 27, 0.27)",
+            "threshold2": null,
+            "threshold2Color": "rgba(234, 112, 112, 0.22)"
+          },
+          "id": 19,
+          "legend": {
+            "avg": false,
+            "current": false,
+            "max": false,
+            "min": false,
+            "show": true,
+            "total": false,
+            "values": false
+          },
+          "lines": true,
+          "linewidth": 2,
+          "links": [],
+          "nullPointMode": "connected",
+          "percentage": false,
+          "pointradius": 5,
+          "points": false,
+          "renderer": "flot",
+          "seriesOverrides": [],
+          "span": 3.9382845188284517,
+          "stack": false,
+          "steppedLine": false,
+          "targets": [
+            {
+              "expr": "process_resident_memory_bytes{job='vcd_exporter_metrics'}",
+              "intervalFactor": 2,
+              "legendFormat": "Bytes",
+              "refId": "A"
+            }
+          ],
+          "timeFrom": null,
+          "timeShift": null,
+          "title": "Exporter Resident Memory Used",
+          "tooltip": {
+            "shared": true,
+            "value_type": "cumulative"
+          },
+          "type": "graph",
+          "x-axis": true,
+          "y-axis": true,
+          "y_formats": [
+            "bytes",
+            "bytes"
+          ]
+        }
+      ],
+      "title": "New row"
+    }
+  ],
+  "time": {
+    "from": "now-6h",
+    "to": "now"
+  },
+  "timepicker": {
+    "refresh_intervals": [
+      "5s",
+      "10s",
+      "30s",
+      "1m",
+      "5m",
+      "15m",
+      "30m",
+      "1h",
+      "2h",
+      "1d"
+    ],
+    "time_options": [
+      "5m",
+      "15m",
+      "1h",
+      "6h",
+      "12h",
+      "24h",
+      "2d",
+      "7d",
+      "30d"
+    ]
+  },
+  "templating": {
+    "list": []
+  },
+  "annotations": {
+    "list": []
+  },
+  "schemaVersion": 7,
+  "version": 7,
+  "links": []
+}
