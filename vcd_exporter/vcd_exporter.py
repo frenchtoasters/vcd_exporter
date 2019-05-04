@@ -235,24 +235,31 @@ class VcdCollector:
                 'Number of networks used by vdc',
                 labels=['vdc_id', 'vdc_name', 'org_id', 'org_name', 'vdc_is_enabled', 'allocation_model']),
         }
+
+        """
+        {
+            "Description": "Status of vApp",
+            "Status": {
+                "FAILED_CREATION": -1,
+                "UNRESOLVED": 0,
+                "RESOLVED": 1,
+                "DEPLOYED": 2,
+                "SUSPENDED": 3,
+                "POWERED_ON": 4,
+                "WAITING_FOR_INPUT": 5,
+                "UNKNOWN": 6,
+                "UNRECOGNIZED": 7,
+                "POWERED_OFF": 8,
+                "INCONSISTENT_STATE": 9,
+                "MIXED": 10
+            }
+        }
+        """
+
         metric_list['vapp_resources'] = {
             'vcd_vdc_vapp_status': GaugeMetricFamily(
                 'vcd_vdc_vapp_status',
-                json.dumps({
-                    "Description": "Status of vApp",
-                    "FAILED_CREATION": -1,
-                    "UNRESOLVED": 0,
-                    "RESOLVED": 1,
-                    "DEPLOYED": 2,
-                    "SUSPENDED": 3,
-                    "POWERED_ON": 4,
-                    "WAITING_FOR_INPUT": 5,
-                    "UNKNOWN": 6,
-                    "UNRECOGNIZED": 7,
-                    "POWERED_OFF": 8,
-                    "INCONSISTENT_STATE": 9,
-                    "MIXED": 10
-                }),
+                'Status of vApp',
                 labels=['vapp_id', 'vapp_name', 'vapp_deployed', 'vapp_status', 'vdc_id', 'vdc_name',
                         'org_id', 'org_name', 'vdc_is_enabled']
             ),
@@ -262,24 +269,31 @@ class VcdCollector:
                 labels=['vapp_id', 'vapp_name', 'vapp_deployed', 'vdc_id', 'vdc_name',
                         'org_id', 'org_name', 'vdc_is_enabled'])
         }
+
+        """
+        {
+            "Description": 'Status of VM',
+            "States": {
+                "FAILED_CREATION": -1,
+                "UNRESOLVED": 0,
+                "RESOLVED": 1,
+                "DEPLOYED": 2,
+                "SUSPENDED": 3,
+                "POWERED_ON": 4,
+                "WAITING_FOR_INPUT": 5,
+                "UNKNOWN": 6,
+                "UNRECOGNIZED": 7,
+                "POWERED_OFF": 8,
+                "INCONSISTENT_STATE": 9,
+                "MIXED": 10
+            }
+        }
+        """
+
         metric_list['vm_resources'] = {
             'vcd_vdc_vapp_vm_status': GaugeMetricFamily(
                 'vcd_vdc_vapp_vm_status',
-                json.dumps({
-                    "Description": 'Status of VM',
-                    "FAILED_CREATION": -1,
-                    "UNRESOLVED": 0,
-                    "RESOLVED": 1,
-                    "DEPLOYED": 2,
-                    "SUSPENDED": 3,
-                    "POWERED_ON": 4,
-                    "WAITING_FOR_INPUT": 5,
-                    "UNKNOWN": 6,
-                    "UNRECOGNIZED": 7,
-                    "POWERED_OFF": 8,
-                    "INCONSISTENT_STATE": 9,
-                    "MIXED": 10
-                }),
+                'Status of VM',
                 labels=['vm_id', 'vm_name', 'vm_deployed', 'vm_status', 'vm_os_type', 'vapp_id',
                         'vapp_name', 'vapp_deployed', 'vdc_id', 'vdc_name', 'org_id', 'org_name',
                         'vdc_is_enabled']
