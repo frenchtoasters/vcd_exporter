@@ -87,7 +87,7 @@ The following the base Prometheus configuration file.
 
 ```
 $> curl localhost:9273/vcd
-# HELP vcd_org_is_enabled {"Description": "Enabled status of Organization", "Enabled": 1, "Disabled": 0}
+# HELP vcd_org_is_enabled Enabled status of Organization
 # TYPE vcd_org_is_enabled gauge
 vcd_org_is_enabled{org_full_name="Lobster-Shack",org_name="urn:vcloud:org:0be49a83-0e85-460a-b1b4-9ac84a4de480"} 1.0
 vcd_org_is_enabled{org_full_name="backup",org_name="urn:vcloud:org:68b0250e-bddf-4e1c-8cd2-0861e15bb8a1"} 1.0
